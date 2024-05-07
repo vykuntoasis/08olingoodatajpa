@@ -1,0 +1,10 @@
+---
+applications:
+- name: 06springbtpdb
+  path: target/07springbtphana-0.0.1-SNAPSHOT.war
+  random-route: true
+  memory: 1024M
+  buildpacks:
+  - sap_java_buildpack
+  services:
+  - hanaschema   

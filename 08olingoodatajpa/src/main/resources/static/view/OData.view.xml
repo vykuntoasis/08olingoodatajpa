@@ -1,0 +1,21 @@
+<spiderman:View xmlns:spiderman="sap.ui.core.mvc" xmlns="sap.m"
+				xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+				controllerName="dorimon.controller.OData">
+		<Page title="Vendor Management Application">
+			<List items="{/VendorSet}" id="idList" selectionChange="onSelect" 
+			mode="SingleSelectMaster" growing="true" growingThreshold="3">
+				<items>
+					<ObjectListItem title="{CompanyName}" intro="{FirstName} {LastName}" 
+						icon="sap-icon://supplier" number="{ContactPerson}"
+					>
+					</ObjectListItem>
+				</items>
+			</List>
+			<footer>
+				<Toolbar>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://save" text="Open" press="onOpen" type="Success"></Button>
+				</Toolbar>
+			</footer>
+		</Page>	
+</spiderman:View>

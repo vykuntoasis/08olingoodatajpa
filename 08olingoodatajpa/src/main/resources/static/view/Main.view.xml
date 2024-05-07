@@ -1,0 +1,77 @@
+<spiderman:View xmlns:spiderman="sap.ui.core.mvc" xmlns="sap.m"
+				xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+				controllerName="dorimon.controller.Main">
+	<App>
+		<Page title="Vendor Management Application">
+			<f:SimpleForm editable="true"> 
+				<f:content>
+					<Label text="Company Name"></Label>
+					<Input value="{/vendor/companyName}" width="60%" id="idCompany"></Input>
+					<Label text="Manager Name"></Label>
+					<Input value="{/vendor/contactPerson}" width="60%" id="idManager"></Input>
+					<Label text="Name"></Label>
+					<Input value="{/vendor/firstName}" id="idFn"></Input>
+					<Input value="{/vendor/lastName}" id="idLn"></Input>
+					<Label text="Website"></Label>
+					<Input value="{/vendor/website}" width="60%"  id="idWeb"></Input>
+					<Label text="Email"></Label>
+					<Input value="{/vendor/email}" width="60%"  id="idEmail"></Input>
+					<Label text="Status"></Label>
+					<Input value="{/vendor/status}" width="60%"  id="idStaus"></Input>
+				</f:content>
+			</f:SimpleForm>
+			<Table items="{/vendorTab}" mode="MultiSelect">
+				<headerToolbar>
+					<Toolbar>
+						<ToolbarSpacer />
+						<Button icon="sap-icon://delete" press="onDelete" tooltip="Delete Selcted"></Button>					
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column>
+						<header>
+							<Text text="Company Name"></Text>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Text text="Manage Name"></Text>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Text text="Person Name"></Text>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Text text="Website"></Text>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Text text="Email"></Text>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{companyName}"></Text>
+							<Text text="{contactPerson}"></Text>
+							<Text text="{firstName} {lastName}"></Text>
+							<Text text="{website}"></Text>
+							<Text text="{email}"></Text>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			<footer>
+				<Toolbar>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://save" text="Save" press="onSave" type="Success"></Button>
+				</Toolbar>
+			</footer>
+		</Page>	
+	</App>
+</spiderman:View>

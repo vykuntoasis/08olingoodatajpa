@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "bcf2a2e1-1b6c-4fb0-9c55-fef8e595944f",
+		"name": "Anubhav BTP Training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Vendors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vendor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Single Vendor Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vendor/1f56bed9-69cb-4aec-9ffb-67f7f9273c2d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendor",
+						"1f56bed9-69cb-4aec-9ffb-67f7f9273c2d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST to create new vendor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\": \"SAP\",\r\n    \"contactPerson\": \"Sakshi\",\r\n    \"firstName\": \"Anjali\",\r\n    \"lastName\": \"Kumari\",\r\n    \"website\": \"www.sap.com\",\r\n    \"email\": \"anjali@sap.com\",\r\n    \"status\": \"A\",\r\n    \"regDate\": \"2022-11-06T02:53:11.380+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vendor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE single vendor data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"20f09622-4f6f-4d0f-9c2f-d5eded36c931\",\r\n    \"companyName\": \"EMC2\",\r\n    \"contactPerson\": \"Saurabh\",\r\n    \"firstName\": \"Ananya\",\r\n    \"lastName\": \"Biswas\",\r\n    \"website\": \"www.emc2.com\",\r\n    \"email\": \"ananya@emc2.com\",\r\n    \"status\": \"A\",\r\n    \"regDate\": \"2022-11-06T02:53:11.380+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vendor?code=20f09622-4f6f-4d0f-9c2f-d5eded36c931",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendor"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "20f09622-4f6f-4d0f-9c2f-d5eded36c931"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE vendor data using microservice",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"VENDX\",\r\n    \"companyName\": \"SAP Labs\",\r\n    \"contactPerson\": \"Prakash Kumar\",\r\n    \"firstName\": \"Lohitaksh\",\r\n    \"lastName\": \"Varshnaey\",\r\n    \"website\": \"www.sap.com\",\r\n    \"email\": \"lohith@sap.com\",\r\n    \"status\": \"A\",\r\n    \"regDate\": \"2022-11-06T02:53:11.380+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vendor/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendor",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search data by Company Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vendor/search?company=SAP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendor",
+						"search"
+					],
+					"query": [
+						{
+							"key": "company",
+							"value": "SAP"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lookup vendor by first name - custom query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vendor/lookup/ia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendor",
+						"lookup",
+						"ia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST new address for one of the employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"addressType\":\"H\",\r\n    \"street\":\"MG Road\",\r\n    \"city\":\"Bangalore\",\r\n    \"country\":\"India\",\r\n    \"region\":\"APJ\",\r\n    \"vendorId\": \"20f09622-4f6f-4d0f-9c2f-d5eded36c931\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST vendor With Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"companyName\": \"EY\",\r\n        \"contactPerson\": \"Santosh\",\r\n        \"firstName\": \"Gaurav\",\r\n        \"lastName\": \"Bindarwal\",\r\n        \"website\": \"www.ey.com\",\r\n        \"email\": \"gaurav@ey.com\",\r\n        \"status\": \"A\",\r\n        \"regDate\": \"2022-11-06T02:53:11.380+00:00\",\r\n        \"addressess\": [\r\n            {\r\n                \"addressType\": \"H\",\r\n                \"street\": \"MG Road\",\r\n                \"city\": \"Gurgaon\",\r\n                \"country\": \"India\",\r\n                \"region\": \"APJ\"\r\n            },\r\n            {\r\n                \"addressType\": \"P\",\r\n                \"street\": \"Mahamandir Road\",\r\n                \"city\": \"Sikar\",\r\n                \"country\": \"India\",\r\n                \"region\": \"APJ\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vendor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendor"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

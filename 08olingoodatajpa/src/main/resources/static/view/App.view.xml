@@ -1,0 +1,7 @@
+<spiderman:View xmlns:spiderman="sap.ui.core.mvc" xmlns="sap.m"
+				xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+				controllerName="dorimon.controller.App">
+	<App id="appCon">
+		
+	</App>
+</spiderman:View>

@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="https://ui5.sap.com/resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_fiori_3_dark"
+				data-sap-ui-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{
+					"dorimon" : "./"
+				}'
+				data-sap-ui-bindingSyntax="complex"></script>
+		
+		<script>
+			
+			/* var oView = new sap.ui.view({
+				viewName: "dorimon.view.Main",
+				type: "XML"
+			}); */
+			
+			var oApp = new sap.ui.view({
+				viewName: "dorimon.view.App",
+				type: "XML"
+			});
+			
+			var oAppCon = oApp.byId("appCon");
+			
+			var oOData = new sap.ui.view({
+				viewName: "dorimon.view.OData",
+				type: "XML"
+			});
+			
+			oAppCon.addPage(oOData);
+			
+			oApp.placeAt("content");
+		
+		</script>
+	</head>
+	<body class="sapUiBody">
+		<div id="content"></div>
+<!-- 		<div style="color:blue">Hello Anubhav Trainings</div>	 -->
+	</body>
+</html>
